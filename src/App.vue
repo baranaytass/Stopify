@@ -38,20 +38,40 @@ export default {
 
 <style>
 .page {
-  display: grid;
-  grid-template-columns: 1fr 4fr 1fr;
-  grid-template-rows: repeat(2, 1fr) 6fr 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+display: grid;
+grid-template-columns: 1fr;
+grid-template-rows: 1fr 6fr;
+grid-column-gap: 0px;
+grid-row-gap: 0px;
+height: 100vh;
+overflow: hidden;
+background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgb(19 20 40 / 82%) 100%);
 }
 
-.navbar {
-  grid-area: 1 / 1 / 2 / 6;
-  min-height: 72px;
-  padding: 18px 16px;
+::-webkit-scrollbar {
+  width: 0.5em; 
 }
 
-.content {
-  grid-area: 3 / 2 / 4 / 3;
+::-webkit-scrollbar-track {
+  background: transparent; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: transparent; 
+  border-radius: 5px;  
+}
+
+/* Firefox için */
+body {
+  scrollbar-width: none;  /* Firefox'ta scroll bar genişliğini sıfırlar */
+  background-color: #000;
+}
+
+.navbar { 
+  grid-area: 1 / 1 / 2 / 2; 
+}
+.content { 
+  grid-area: 2 / 1 / 3 / 2;
+  margin: 0 8% !important;
 }
 </style>

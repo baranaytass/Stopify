@@ -13,7 +13,14 @@ const app = createApp(App)
 
 
 const vuetify = createVuetify({
-  theme: { defaultTheme: 'dark' },
+  theme: {
+    defaultTheme: 'dark',
+    themes: {
+      dark: {
+        'stopify-black-1': 'green'
+      }
+    }
+  },
   components,
   directives,
 })

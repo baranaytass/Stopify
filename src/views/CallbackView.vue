@@ -9,8 +9,6 @@ import { getUserProfile } from '../services/spotifyApi.js';
 </template>
   
 <script>
-
-
 export default {
   async mounted() {
     const accessToken = this.getAccessTokenFromUrl();

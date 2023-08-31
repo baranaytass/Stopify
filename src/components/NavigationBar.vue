@@ -28,8 +28,12 @@ export default {
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
-    background-color: #333;
+    
     color: white;
+}
+
+nav {
+  background-color: #000 !important;
 }
 
 .logo {

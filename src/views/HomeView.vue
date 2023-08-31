@@ -1,5 +1,6 @@
 <script setup>
 import SpotifyIcon from '../assets/icons/SpotifyIcon.vue';
+import UserLibrary from '@/components/Authenticated/home/UserLibrary.vue';
 </script>
 
 <template>
@@ -9,7 +10,7 @@ import SpotifyIcon from '../assets/icons/SpotifyIcon.vue';
     </v-btn>
   </div>
   <div v-else>
-    Logged in!
+    <UserLibrary />
   </div>
 </template>
 
