@@ -2,6 +2,7 @@
 import { getPlaylistContent } from '../services/spotifyApi.js';
 import PlaylistDetailCard from '@/components/Authenticated/playlist/PlaylistDetailCard.vue';
 import SongCard from '@/components/Authenticated/playlist/SongCard.vue';
+import AnimatedButton from '@/components/Authenticated/playlist/AnimatedButton.vue';
 </script>
 
 <template>
@@ -9,9 +10,26 @@ import SongCard from '@/components/Authenticated/playlist/SongCard.vue';
         <v-row no-gutters>
             <v-col cols="4">
                 <PlaylistDetailCard :playlist="playlist" />
+
+                <!-- <v-btn class="back-library-button" block variant="plain">
+                    <font-awesome-icon icon="arrow-circle-left" 
+                    style="top: -1px; position: relative; margin-right: 2px;"/>Back Library
+                </v-btn>
+
+                <v-btn class="stopify-button" block variant="plain">
+                    <font-awesome-icon :icon="['fab', 'spotify']" 
+                    style="top: -1px; position: relative; margin-right: 2px;"/>Stopify
+                </v-btn> -->
+
+                <AnimatedButton 
+                    :text="'Back Library'" 
+                    :icon="['far', 'circle-left']" 
+                    :primaryColor="'#ff0050'" 
+                    :secondaryColor="'#ff005087'"
+                    />
             </v-col>
             <v-col>
-                <v-card class="playlist-content-card mx-4 pa-2" variant="text" style="border: 1px solid rgba(128, 128, 128, 0.471);">
+                <v-card class="playlist-content-card mx-4 pa-2" variant="text">
                     <div>
                         <v-list v-if="playlist != null" variant="plain" bg-color="#161618">
                             <SongCard v-for="(song, index) in playlist.tracks.items" :song="song" />
@@ -50,6 +68,7 @@ export default {
 
 .playlist-content-card {
     height: 560px;
+    border: 1px solid rgba(128, 128, 128, 0.471);
 }
 
 .playlist-content-card>div {
@@ -57,6 +76,8 @@ export default {
     overflow: auto;
 }
 
+
+/* SCROLL BAR */
 ::-webkit-scrollbar {
     width: 0;
     padding: 4px 0;
@@ -70,4 +91,16 @@ export default {
     background-color: rgba(255, 255, 255, 0.587);
     border-radius: 4px;
 }
+
+/* BUTTONS */
+/* .stopify-button,
+.back-library-button {
+  transform: perspective(1500px) rotateY(30deg);
+  transition: transform 1s ease 0s;
+
+  &:hover {
+    transform: perspective(3000px) rotateY(-30deg);
+    transition: transform 0.6s ease-in-out 0s;
+  }
+} */
 </style>

@@ -1,19 +1,19 @@
 <template>
-    <img src="./spotify.svg" :height="size" :width="size" alt="Icon" />
-  </template>
+  <img src="./spotify.svg" :height="size" :width="size" alt="Icon" />
+</template>
   
-  <script>
-  export default {
-    props: {
-      size: {
-        type: [Number],
-        required: true
-      }
+<script>
+export default {
+  props: {
+    size: {
+      type: [Number],
+      required: true
     }
-  };
-  </script>
+  }
+};
+</script>
   
-  <style>
-  /* İstediğiniz ek stilleri buraya ekleyebilirsiniz */
-  </style>
+<style>
+/* İstediğiniz ek stilleri buraya ekleyebilirsiniz */
+</style>
   

@@ -6,7 +6,7 @@ import PlaylistCard from './PlaylistCard.vue';
 <template>
     <div class="library-card w-75 mx-auto">
         <v-list lines="two">
-            <PlaylistCard v-for="(playlist, index) in playlists" :key="playlist.id" :name="playlist.name" :owner="playlist.owner.display_name" :imageSource="playlist.images[0].url"
+            <PlaylistCard v-for="(playlist, index) in playlists" :key="playlist.id" :name="playlist.name" :owner="playlist.owner.display_name" :imageSource="playlist.images[0]?.url"
             @click="$router.push({ name: 'PlaylistView', params: { playlistId: playlist.id } })" />
         </v-list>
 

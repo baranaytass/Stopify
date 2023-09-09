@@ -1,7 +1,8 @@
 <template>
-    <v-list-item style="margin-bottom: 4px; cursor: default;"
+    <v-list-item style="margin-bottom: 4px; cursor: default;" class="w-100"
     :title="song.track.name" :prepend-avatar="song.track.album.images[0].url" 
     :subtitle="song.track.artists.map(a => a.name).join(', ')"/>
+    <!-- <v-divider class="w-25 mx-auto bg-transparent"></v-divider> -->
 </template>
 
 <!-- <template>
